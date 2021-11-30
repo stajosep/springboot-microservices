@@ -10,10 +10,7 @@ import javax.validation.constraints.Size;
 
 import com.staphy.rest.webservices.restfulwebservices.post.Post;
 
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 
-@ApiModel(description="Details about the user")
 public class User {
 	
 	public User() {
@@ -25,11 +22,9 @@ public class User {
 	
 
 	@Size(min=2, message="Name should have atleast 2 characters")
-	@ApiModelProperty(notes="Name should have atleast 2 characters")
 	private String name;
 	
 	@Past
-	@ApiModelProperty(notes="Birth dates should be in the past")
 	private Date birthDate;
 
 	private List<Post> posts;
